@@ -1,0 +1,124 @@
+.Header {
+  display: flex;
+  justify-content: left;
+}
+.Header #nameValue {
+  width: 15rem;
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.Header #phoneValue {
+  width: 15rem;
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.Header #addButton {
+  background-color: rgb(60, 0, 255);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.Body {
+  display: flex;
+  justify-content: left;
+}
+.Body #search {
+  width: 15rem;
+  background-color: rgb(233, 233, 233);
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.Body #findButton {
+  background-color: rgb(60, 0, 255);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.Body #filter {
+  background-color: rgb(60, 0, 255);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.fade li {
+  transition: all 0.4s ease-out;
+  opacity: 0;
+  height: 2em;
+}
+
+.fade li.show {
+  opacity: 1;
+}
+
+.swing li {
+  opacity: 0;
+  transform: rotateX(-90deg);
+  transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76);
+}
+
+.swing li.show {
+  opacity: 1;
+  transform: none;
+  transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76);
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+}
+#info li {
+  list-style: none;
+  background: black;
+  color: #fff;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+#info li.show {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: rgb(215, 215, 215);
+  border-radius: 10px;
+  height: 1.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+#info li.show .fade {
+  opacity: 1;
+}
+#info li.show .Name {
+  color: black;
+  position: relative;
+  left: 0;
+  padding-right: 2rem;
+  font-size: 30px;
+}
+#info li.show .Phone {
+  color: black;
+  position: relative;
+  right: 0;
+  padding-left: 2rem;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */

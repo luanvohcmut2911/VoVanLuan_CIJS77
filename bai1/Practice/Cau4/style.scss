@@ -1,0 +1,134 @@
+@mixin ButtonCss{
+    background-color: rgb(60,0,255);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+@mixin HoverCss{
+    cursor: pointer;
+}
+@mixin InputCss{
+    width: 15rem;
+    background-color: rgb(233,233,233);
+    border-radius: 5px;
+    border: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+.Header{
+    display: flex;
+    justify-content: left;
+    #nameValue{
+        @include InputCss();
+    }
+    #phoneValue{
+        @include InputCss();
+    }
+    #addButton{
+        @include ButtonCss();
+        @include HoverCss();
+    }
+}
+.Body{
+    display: flex;
+    justify-content: left;
+    #search{
+        @include InputCss();
+    }
+    #findButton{
+        @include ButtonCss();
+        @include HoverCss();
+    }
+    #filter{
+        @include ButtonCss();
+        @include HoverCss();
+    }
+}
+.fade li {
+    transition: all 0.4s ease-out;
+    opacity: 0;
+    height: 2em;
+}
+.fade li.show {
+    opacity: 1;
+}
+.swing li {
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+} 
+.swing li.show {
+    opacity: 1;
+    transform: none;
+    transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+#info{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    
+    li {
+        list-style: none;
+        background: black;
+        color: #fff;
+        height: 0;
+        // line-height: 2em;
+        margin: 0;
+        // padding: 0 0.5em;
+        overflow: hidden;
+        // width: 60vw;
+    }
+      
+    li.show {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        background-color: rgb(215,215,215);
+        border-radius: 10px;
+        height: 1.5rem;
+        margin: 0.5rem;
+        padding: 1rem;
+        .fade {
+            opacity: 1;
+        }
+        .Name{
+            color: black;
+            position: relative;
+            left:0;
+            padding-right:2rem;
+            font-size: 30px;
+        }
+        .Phone{
+            color: black;
+            position: relative;
+            right: 0;
+            padding-left: 2rem;
+            font-size: 30px;
+        }
+    }
+        
+    // .block{
+    //     display: flex;
+    //     flex-direction: row;
+    //     position: relative;
+    //     background-color: rgb(215,215,215);
+    //     border-radius: 10px;
+    //     margin: 0.5rem;
+    //     padding: 1rem;
+    //     .Name{
+    //         position: relative;
+    //         left:0;
+    //         padding-right:2rem;
+    //         font-size: 30px;
+    //     }
+    //     .Phone{
+    //         position: relative;
+    //         right: 0;
+    //         padding-left: 2rem;
+    //         font-size: 30px;
+    //     }
+    // }
+}
