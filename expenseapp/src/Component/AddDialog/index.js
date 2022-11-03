@@ -27,22 +27,26 @@ export const Dialog = ({display, setDisplay, expenseData, setExpenseData}) =>{
             objDate.month = month[d.getMonth()];
             objDate.day = d.getDate();
             objDate.monthID = d.getMonth()+1;
+            const regex= /^[0-9]+$/ ; 
+            if(amount.match(regex) && date!==undefined && name !==undefined){
+                setExpenseData([...expenseData, {
+                    date: objDate,
+                    price: amount,
+                    type: name
+                }])
+                alert('added successfully');
+                document.getElementById('name').value = '';
+                document.getElementById('amount').value = '';
+                document.getElementById('date').value = '';
+            }
+            else {
+                alert('please enter in correct format');
+            }
         } 
         else { 
-            console.error('Invalid date'); // Invalid
+            alert('Invalid date'); // Invalid
         }
-        const regex= /^[0-9]+$/ ; 
-        if(amount.match(regex) && date!==undefined && name !==undefined){
-            setExpenseData([...expenseData, {
-                date: objDate,
-                price: amount,
-                type: name
-            }])
-            alert('added successfully');
-        }
-        else {
-            alert('please enter in correct format');
-        }
+        
     }
     const handleCancel = (e) => {
         e.preventDefault();

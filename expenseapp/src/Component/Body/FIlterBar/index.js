@@ -1,8 +1,10 @@
 import './index.css';
-export const FilterBar = () =>{
+
+export const FilterBar = ({setYear}) =>{
     const years = [2021, 2022, 2023, 2024];
     const handleSelect = (e) =>{
-        console.log(e.target.value);
+        setYear(e.target.value);
+        // setExpenseData([...expenseData]);
     }
     return (
         <div className = "filterBar" onChange={handleSelect}>

@@ -1,7 +1,8 @@
 import "./index.css";
-
-export const MonthlyTube = ({data}) => {
+// import { useEffect, useRef } from "react";
+export const MonthlyTube = ({data, year}) => {
   const dailyData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let maxDailyData = 0;
   const month = [
     "Jan",
     "Feb",
@@ -14,19 +15,21 @@ export const MonthlyTube = ({data}) => {
     "Sep",
     "Oct",
     "Nov",
-    "Dec",
+    "Dec"
   ];
-  data.filter((d)=> d.date.year===2022 ).map((d)=>{
-    return dailyData[d.date.monthID-1] += d.price;
-  })
-  console.log();
+  data.filter((d)=> d.date.year===year ).map((d)=>{
+    return dailyData[d.date.monthID-1] += parseInt(d.price);
+  }); // ?
+  dailyData.map((d)=>{
+    return ((maxDailyData<d) ? maxDailyData=d: 0)
+  }) // ? 
   return (
     <div className="MonthlyTube">
       {dailyData.map((daily, index) => {
         return (
           <div key={index}>
             <div className="barContainer">
-              <div className="bar" style={{ height: `${daily}%` }}></div>
+              <div className="bar" style={{ height: `${parseInt(maxDailyData)===0?0:daily/parseInt(maxDailyData)*100}%` }}></div>
             </div>
             <div style={{marginTop: '1rem'}}>{month[index]}</div>
           </div>
