@@ -2,12 +2,11 @@ import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-
 export const Expense = ({expenseData, year, setExpenseData}) =>{
     return (
         <div className="detailBox">
         {
-            expenseData.filter((d)=> d.date.year===year).map((eData, index)=>{
+            expenseData.filter((d)=> d.date.year===parseInt(year)).map((eData, index)=>{
                 const {date, price, type} = eData;
                 const {day, month, year} = date;
                 return (
@@ -21,12 +20,20 @@ export const Expense = ({expenseData, year, setExpenseData}) =>{
                         <div className='rightSide'>
                             <div className='price'>$ {parseInt(price)}</div>
                             <div style={{display: 'flex', flexDirection: 'column'}} className='icon'>
-                                <FontAwesomeIcon icon={faGear} style={{marginBottom: '1rem'}} />
-                                <FontAwesomeIcon icon={faTrashCan} onClick={()=>{
-                                    alert ('deleted');
-                                    // expenseData.filter((d)=> d.date.year===year).splice(index,1);
+                                <div style={{marginBottom: '1rem'}} onClick={()=>{
+                                    if(window.confirm('Are you sure you want to edit? ')){
+                                        document.getElementById('changeButton').click();
+                                        setExpenseData(expenseData.filter((d)=>d!==eData));
+                                    }
+                                }}>
+                                    <FontAwesomeIcon icon={faGear} />
+                                </div>
+                                <div id='deleteButton' onClick={()=>{
+                                    alert ('deleted');  
                                     setExpenseData(expenseData.filter((d)=>d!==eData));
-                                }}/>
+                                }}>
+                                    <FontAwesomeIcon  icon={faTrashCan} />
+                                </div>
                             </div>
                         </div>
                     </div>
