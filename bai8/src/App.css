@@ -1,0 +1,21 @@
+
+.App{
+  padding: 1rem;
+  /* display: flex; */
+  /* position: absolute; */
+  transition: 2s all ease;
+}
+.header{
+  width: 95vw;
+  height: auto;
+  position: fixed;
+  /* padding-left: 2rem; */
+}
+.header>button{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.header>button:hover{
+  cursor: pointer;
+}
