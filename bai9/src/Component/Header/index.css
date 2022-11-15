@@ -1,0 +1,9 @@
+.header{
+    width: 100vw;
+    height: 10vh;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

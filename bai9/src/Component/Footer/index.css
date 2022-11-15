@@ -1,0 +1,12 @@
+.footer{
+    width: 100vw;
+    height: 20vh;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.selectCard{
+    margin: 1rem;
+    font-size: 25px;
+}

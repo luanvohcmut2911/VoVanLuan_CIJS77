@@ -1,0 +1,29 @@
+.login{
+    width: 100vw;
+    height: 60vh;
+    background-color:aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome{
+    font-size: 40px;
+    font-weight: bold;
+}
+.form{
+    width: 60vw;
+    height: 40vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
