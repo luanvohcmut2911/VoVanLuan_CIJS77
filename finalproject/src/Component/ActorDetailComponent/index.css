@@ -1,0 +1,41 @@
+.underTitle{
+    display: flex;
+    
+}
+
+.infoLeft{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    flex: 2;
+}
+
+.infoRight{
+    flex: 1;
+    flex-wrap: wrap;
+    background-color: #0F4C75 !important;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+}
+
+b{
+    display: inline-block;
+}
+
+
+@media (max-width: 900px){
+    .underTitle{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .poster{
+        width: 210px;
+        height: 195px;
+    }
+}
+

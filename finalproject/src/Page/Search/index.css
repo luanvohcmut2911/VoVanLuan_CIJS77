@@ -1,0 +1,15 @@
+.FilmResult{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.PeopleResult{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.SkeletonOutline{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

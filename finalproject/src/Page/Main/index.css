@@ -1,0 +1,20 @@
+.body{
+    margin-top: 1rem;
+}
+.MainPage{
+    /* height: 295px;
+    width: 210px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+.Skeleton{
+    margin: 0.5rem;
+}
+.Pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

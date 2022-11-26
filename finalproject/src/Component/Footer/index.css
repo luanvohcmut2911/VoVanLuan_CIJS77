@@ -1,0 +1,24 @@
+.footer{
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+#text{
+    margin: 0;
+}
+.leftPartUpper{
+    display: flex;
+    flex-direction: row;
+}
+.leftPartLower{
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width: 900px){
+    .footer{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 2rem;
+    }
+}
